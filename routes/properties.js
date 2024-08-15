@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
         await newProperty.save();
         res.status(201).json(newProperty);
     } catch (err) {
-        res.status(500).json({ msg: 'Server error' });
+        res.status(500).json({ msg: 'Server error',err });
     }
 });
 
